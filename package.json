@@ -1,0 +1,7 @@
+{
+  "name": "ziton",
+  "private": true,
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

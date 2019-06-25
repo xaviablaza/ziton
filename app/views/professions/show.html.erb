@@ -1,0 +1,32 @@
+<div data-controller="clipboard">
+  <p>
+  <strong>Company:</strong>
+  <a href="<%= @profession.website %>" target="_blank"><%= @profession.company %></a>
+  </p>
+
+  <p>
+  <strong>Title:</strong>
+  <a href="<%= @profession.job_url %>" target="_blank"><%= @profession.title %></a>
+  </p>
+
+  <p>
+  <strong>Location:</strong>
+  <%= @profession.location %>
+  </p>
+
+  <p>
+  <strong>Status:</strong>
+  <%= @profession.status %>
+  </p>
+
+  <p>
+  <strong>Cover letter:</strong>
+  <textarea data-target="clipboard.source" readonly><%= @profession.cover_letter.body_formatted(@profession.title, @profession.company) %></textarea>
+  </p>
+
+  <button data-action="clipboard#copy">Copy Cover Letter to Clipboard</button>
+  <br>
+  <br>
+  <%= link_to 'Edit', edit_profession_path(@profession) %> |
+  <%= link_to 'Back', professions_path %>
+</div>

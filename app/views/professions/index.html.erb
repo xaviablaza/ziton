@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Professions</h1>
+<%= link_to 'New Profession', new_profession_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company</th>
+      <th>Title</th>
+      <th>Location</th>
+      <th>Status</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @professions.each do |profession| %>
+      <tr>
+        <td><a href="<%= profession.website %>" target="_blank"><%= profession.company %></a></td>
+        <td><a href="<%= profession.job_url %>" target="_blank"><%= profession.title %></a></td>
+        <td><%= profession.location %></td>
+        <td><%= profession.status %></td>
+        <td><%= link_to 'Show', profession %></td>
+        <td><%= link_to 'Edit', edit_profession_path(profession) %></td>
+        <td><%= link_to 'Destroy', profession, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Profession', new_profession_path %>

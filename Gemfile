@@ -21,6 +21,7 @@ gem "title"
 gem "tzinfo-data", platforms: [:mingw, :x64_mingw, :mswin, :jruby]
 gem "uglifier"
 gem "bootsnap", require: false
+gem 'webpacker', git: 'https://github.com/rails/webpacker.git'
 
 
 group :development do
@@ -28,6 +29,7 @@ group :development do
   gem "rack-mini-profiler", require: false
   gem "spring"
   gem "web-console"
+  gem "hexapdf"
 end
 
 group :development, :test do

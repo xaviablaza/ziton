@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/rails/webpacker.git
+  revision: cdafb9565ec28909070271e13ad94c5e100bf2be
+  specs:
+    webpacker (4.0.7)
+      activesupport (>= 4.2)
+      rack-proxy (>= 0.6.1)
+      railties (>= 4.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -84,6 +93,7 @@ GEM
     chromedriver-helper (2.1.1)
       archive-zip (~> 0.10)
       nokogiri (~> 1.8)
+    cmdparse (3.0.4)
     coderay (1.1.2)
     concurrent-ruby (1.1.5)
     crack (0.4.3)
@@ -112,9 +122,13 @@ GEM
       activesupport
       capybara
       i18n
+    geom2d (0.2.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     hashdiff (0.4.0)
+    hexapdf (0.9.3)
+      cmdparse (~> 3.0, >= 3.0.3)
+      geom2d (~> 0.2)
     high_voltage (3.1.2)
     honeybadger (4.3.1)
     i18n (1.6.0)
@@ -164,6 +178,8 @@ GEM
       rack (>= 1.0.0, < 3)
     rack-mini-profiler (1.0.2)
       rack (>= 1.2.0)
+    rack-proxy (0.6.5)
+      rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rack-timeout (0.5.1)
@@ -302,6 +318,7 @@ DEPENDENCIES
   dotenv-rails
   factory_bot_rails
   formulaic
+  hexapdf
   high_voltage
   honeybadger
   launchy
@@ -333,6 +350,7 @@ DEPENDENCIES
   uglifier
   web-console
   webmock
+  webpacker!
 
 RUBY VERSION
    ruby 2.5.3p105

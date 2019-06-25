@@ -1,0 +1,12 @@
+<p>
+  <strong>Name:</strong>
+  <%= @cover_letter.name %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @cover_letter.body %>
+</p>
+
+<%= link_to 'Edit', edit_cover_letter_path(@cover_letter) %> |
+<%= link_to 'Back', cover_letters_path %>

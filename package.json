@@ -2,6 +2,11 @@
   "name": "ziton",
   "private": true,
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "@rails/webpacker": "^4.0.7",
+    "normalize.css": "^8.0.1",
+    "stimulus": "^1.1.1"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.7.2"
   }
 }

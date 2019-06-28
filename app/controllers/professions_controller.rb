@@ -4,6 +4,7 @@ class ProfessionsController < ApplicationController
   # GET /professions
   def index
     @professions = Profession.order_by_status
+    @active_apps = Profession.where.not({status: [1,6,7,0]}).count
   end
 
   # GET /professions/1
